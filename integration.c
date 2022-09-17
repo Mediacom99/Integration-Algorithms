@@ -1,6 +1,7 @@
 
 #include<stdio.h>
 #include<stdlib.h>
+#include<math.h>
 
 //Integration from 0 to any positive real number of a general function 
 
@@ -9,13 +10,17 @@ double func(double x)
  return x - x*x*x / (6) + x*x*x*x*x / (2*3*4*5) - x*x*x*x*x*x*x / (5040) + x*x*x*x*x*x*x*x*x / (5040*8*9) - x*x*x*x*x*x*x*x*x*x*x / (5040*8*9*10);
 }
 
+double funky(double x)
+{
+	return exp(x);
+}
 double integrate(double limit, double precision)
 {
 	double result = 0;
 	double x = 0.0000001;
 	while(x < limit)
 	{
-		result += func(x)*precision ;
+		result += funky(x)*precision ;
 	        x += precision;	
 	}
 
