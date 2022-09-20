@@ -33,6 +33,6 @@ int main()
 	double precision,limit = 0.0;
 	printf("First parameter: limit of integration from zero\nSecond parameter: precision or rectangle base\nNow input parameters:\n");
 	scanf("%lf %lf", &limit, &precision);
-	printf("Risultato: %lf \n ",integrate(limit,precision));
+	printf("Result: %lf \n ",integrate(limit,precision));
 	return 0;
 }
